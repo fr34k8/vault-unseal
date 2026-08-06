@@ -217,9 +217,9 @@ func syncConfig(ctx context.Context, logger *slog.Logger) error {
 		return err
 	}
 
-	if perms := stat.Mode().Perm(); perms != 0o600 && perms != 0o440 && perms != 0o400 {
+	if perms := stat.Mode().Perm(); perms != 0o600 && perms != 0o640 && perms != 0o440 && perms != 0o400 {
 		return fmt.Errorf(
-			"permissions of %q are insecure: %s, please use 0600, 0440, or 0400",
+			"permissions of %q are insecure: %s, please use 0600, 0640, 0440, or 0400",
 			path, perms,
 		)
 	}
