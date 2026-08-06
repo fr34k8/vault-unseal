@@ -5,7 +5,9 @@
 -->
 # ⚙️ CLI Usage Documentation: vault-unseal
 
-> automatically unseals Hashicorp Vault clusters
+```
+automatically unseals Hashicorp Vault clusters
+```
 
 ---
 
